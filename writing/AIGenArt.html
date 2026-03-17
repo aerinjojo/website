@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .article-container {
+      max-width: 1000px;
+    }
+    .article-title {
+      font-family: var(--serif);
+      font-size: 2rem;
+      line-height: 1.3;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+    .article-meta {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--fg2);
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .article-body {
+      font-family: var(--serif);
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--fg);
+    }
+    .article-body p {
+      margin-bottom: 1.2rem;
+    }
+    .back-link {
+      font-family: var(--mono);
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--fg2);
+      cursor: pointer;
+      margin-bottom: 2rem;
+      display: inline-block;
+    }
+    .back-link:hover {
+      color: var(--fg);
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-underline-offset: 3px;
+    }
+  </style>
+</head>
+<body>
+<div class="site">
+
+  <header class="site-header">
+    <div>
+      <div class="site-name" style="font-size: large;">Aerin Jo Tran</div> 
+      <div class="site-date" id="hdr-date"></div>
+    </div>
+    <nav>
+      <a data-page="home" onclick="goto('home')">Index</a>
+      <a data-page="about" onclick="goto('about')">About</a>
+      <a data-page="tech" onclick="goto('tech')">Work</a>
+      <a data-page="blog" onclick="goto('blog')">Writing</a>
+      <a data-page="contact" onclick="goto('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <div class="article-container">
+    <a class="back-link" onclick="window.history.back()">← Back</a>
+    
+    <h1 class="article-title">AI Generated Art</h1>
+    <div class="article-meta">Dec 15, 2024 · 10 min read</div>
+    
+    <div class="article-body">
+            <p>
+                With the growing popularity of AI-generated art platforms such as Midjourney and Stability AI, this essay explores their implications for our understanding of art. AI-generated art is created through neural networks trained on large datasets, producing works across diverse disciplines such as music, poetry, and visual art. Unlike traditional art or even other digital artforms like CGI, AI-generated art relies primarily on inputs, reducing the human role in its creation to prompts and selection. This essay examines the historical evolution of art, from traditional oil paintings to movements like Impressionism or Dadaism that challenged rigid definitions, and asks whether AI-generated works align with our modern understanding of art.
+            </p>
+            <h3>Introduction</h3>
+            <p>
+                In light of the first AI-generated work sold, I will analyze the AI-generated portrait titled Edmond de Bellamy, created by an AI-research group based in Sorbonne called Obvious. In 2019 the portrait was sold for $432,000 at a Christie’s auction when its estimated value only amounted to about $10,000 solidifying an important landmark of AI-generated art infiltrating the fine arts (Hicks). There are three main points of criticism about this piece and its position within the intersections of art and technology:
+            </p>
+                <ol>
+                    <li style="margin-left: 50px;">The creators borrowed code from others.</li>
+                    <li style="margin-left: 50px;">AI-generated art is not creative.</li>
+                    <li style="margin-left: 50px;">AI-generated art lacks human emotion.</li>
+                </ol>
+            <p>
+                    Despite these claims trying to dismantle the value of this piece, I will argue that it is a worthy representative of AI-generated art and that it can indeed more broadly be considered art.
+            </p>
+                <ol>
+                    <li style="margin-left: 50px;">In the programming industry it is normal to borrow code.</li>
+                    <li style="margin-left: 50px;">True originality is not possible as there is nothing new under the sun.</li>
+                    <li style="margin-left: 50px;">The art process does not require human emotion in order for the viewer to derive meaning.</li>
+                </ol>
+            <p>
+                I will begin by explaining how GANs work before directly addressing each claim and then exploring the meaning or art itself. 
+            </p>
+
+            <h3>How it works: Breakdown of Generative Adversarial Network (GAN)</h3>
+            <i>
+                The question of authorship becomes complex when an intermediary, like the engineers who develop the code, enters the artistic process. To understand the relationship between the artist and generative models, we must first examine how neural networks like GANs function.  
+            </i>
+            <p>
+                For a simplified overview, in 2014 GANs were introduced as a new neural network architecture that would be extremely useful when working specifically with images. It consists of two models, the Generator and Discriminator. The Adversarial part of the name comes from the fact that the two models are pitted against each other. It's sort of like a criminal, who generates data, and a detective, who must discriminate between real and fake data. If the criminal is caught making fake data by the detective, the generator is penalized, if it fools the detective with fake data, the discriminator is penalized. This back and forth training process may take several days, however once the model is sufficiently trained, it takes under a second to output images.
+            </p>
+            <p>
+                Despite their sophistication, GAN-generated images often exhibit distinctive characteristics. Outputs tend to be blurry or neutral in tone because the algorithm doesn't “understand” specific features like what is an eyebrow or what are shoulders. Instead, GANs convert training data into numerical patterns and identify trends to generate results. It is important to note that users cannot control the exact outcome until the model runs, highlighting that while AI is a powerful tool, it lacks independent thought.
+            </p>
+            <p>
+                With this foundational understanding of GANs, we can consider how authorship works in practice. One notable controversy arose with a GAN-produced artwork titled Edmond de Belamy, created by the art collective Obvious. The collective did not write the GAN code themselves but instead adapted a model originally developed by AI-art pioneer Robbie Barrat, who shared his work on GitHub, a platform promoting open-source collaboration. This approach, common in the programming community, reflects a culture of decentralization, accessibility, and collaboration.
+            </p>
+            <p>
+                Although Obvious claims to have made significant modifications to Barrat's code to suit their chosen input data, the outputs were notably similar to Barrat's work. Yet instead of crediting Barrat, the group signed the artwork with a fragment of the mathematical equation used in GANs and named it Edmond de Belamy (a play on "bel ami") as homage to Ian Goodfellow, the creator of GANs. This decision sparked controversy, with critics arguing that Barrat's contributions were essential to the creation of the artwork.
+            </p>
+            <p>
+                The collaborative and iterative nature of AI-generated art challenges traditional notions of authorship. If multiple individuals contribute to the creation—through code development, adaptation, and input selection, how do we determine who should be credited as the “artist”? 
+            </p>
+            
+            <h3>Determining Authorship through: Originality, Creativity, and Newness </h3>
+            <i>
+                Determining authorship in AI-generated art inevitably raises questions about originality, creativity, and newness, especially in light of concerns over copyright infringement. These concepts are central to the notion of authorship because the “artist” is traditionally understood as someone capable of producing new and original works, an indication of creativity.
+            </i>
+            <p>
+                There have recently been numerous lawsuits concerning the copyright infringement of AI-generated art sites. A recent landmark court decision in August ruled that Stability AI, Midjourney, among numerous others, have illegally stored works in their libraries violating the rights of the artists (Akers). Some might conclude that these unoriginal works produced by AI models mean that they do not possess any creativity of their own since it's nothing new, leveling the words creative, new, and original. However, before assessing these claims, it is important to distinguish between these notions in order to understand their implications for authorship.
+            </p>
+            <p>
+                The concept of newness often brings to mind the idea “Nothing New Under the Sun.” In its biblical context, this phrase suggests that human creations are cyclical and transient, unable to endure the test of time. On another level, it reflects the idea that no innovation is entirely novel, as all human endeavors build upon a chain of preexisting ideas. For instance, AI technology, though remarkable, is the culmination of past mathematical and computational advancements. Similarly, scientific discoveries simply identify phenomena that have always existed, and human evolution is a slow accumulation of mutations over millennia. Tracing the origins of novelty is like unpacking a Russian nesting doll; each layer is built upon another, making true originality elusive.
+            </p>
+            <p>
+                Nevertheless, the impossibility of absolute novelty does not render newness meaningless. There are two ways to approach the idea:
+            </p>
+            <ol>
+                <li style="margin-left: 50px;">The overarching impossibility of true novelty as discussed.</li>
+                <li style="margin-left: 50px;">The more limited context of the entity compared to its peers.</li>
+            </ol>
+            <p>
+                In the latter perspective, the word new can be exchanged with different, tied to an emphasis on the fact that it hasn't been seen before. For example, Manet's Olympia can be seen as new within its context because its exact color choice, lines, and format have never been realized before. However, in a broader sense, it is not truly new because it draws heavily from Titian's Venus of Urbino, reinterpreting elements such as the subject and composition. The comparison of the paintings illustrate how these two approaches of newness can simultaneously exist. 
+            </p>
+            <p>
+                In the case of Obvious, the art collective behind the GAN-generated artwork Edmond de Belamy, the question of originality is deeply layered. Obvious used a model developed by AI-art pioneer Robbie Barrat, who had made his code publicly available on GitHub. While Obvious claims to have modified the code to suit their chosen training data, their outputs closely resemble Barrat's own work. Yet Barrat's work itself relies on Ian Goodfellow's foundational development of GANs. So who is the true creator of Edmond de Belamy? Is it Obvious, for providing the intention and input data? Barrat, who wrote the code that directly generates the images? Or Goodfellow, whose algorithm enabled the entire process? The nesting-doll metaphor reemerges here, with authorship becoming an ever-receding question of origin.
+            </p>
+            <p>
+                This dilemma forces us to ask why originality matters in art. Is it for social recognition, monetary gain, or the empirical achievement of creativity? All three are substantial reasons, but is true originality even possible? All human creativity, whether intentionally or unconsciously, is influenced by prior works, be they books, films, or personal experiences. Purely original ideas may not exist, but this does not diminish the value of creativity. Instead, it shifts our understanding of what creativity entails.
+            </p>
+            <p>
+                To be creative is to be able to connect ideas and derive meanings in order to create something never seen before. Creativity is valued because it offers diverse perspectives allowing for more nuanced detail and henceforth more understanding. The term creativity uses the second definition of newness, emphasizing the difference of the entity amongst its peers, the first to be realized. This understanding challenges the critique that AI-generated art is not creative because it rearranges existing inputs, since, this is how all people emulate creativity, by adapting prior knowledge and experiences to produce something that has never been seen before.
+            </p>
+            <p>
+                If AI-generated art lacks creativity, it may not be due to its reliance on past inputs but rather because it lacks the emotional depth and intentionality associated with human experience. This shifts the debate away from whether AI can be original and toward how we define creativity itself.
+            </p>
+
+            <h3>Emotion in the Artistic Process</h3>
+            <i>
+                Generative Adversarial Networks (GANs) train on thousands of input images to produce a new (contextual definition) image. While each input image might carry the emotions of its original creator, these emotions are lost in the generative process. Does this loss disqualify AI-generated images from being considered art?
+            </i>
+            <p>
+                One could argue that art created with deep emotional intent often carries greater depth, producing richer and more impactful experiences. Knowing that AI-generated art bypasses the meticulous thought and emotional labor of human artists could lead to shallower responses. The lack of a human touch might also deprive the viewer of the layers of meaning typically embedded in traditionally created works.
+            </p>
+            <p>
+                Firstly, in order to solidify the notion that  computers cannot understand emotions, I will first investigate how we humans understand emotions. In primary school, we learn to match different facial expressions to the basic emotions: anger, happiness, worry, etc., it is image based, specific patterns within the face that a computer could learn. But recognition is not enough to fulfill understanding. Understanding emotion would entail also being able to feel emotions. For example, in empathy, a product of emotion, one would be able to understand how the other feels because they recognize their emotion and are able to feel the same notions of it based on their own experiences with it. It is impossible for computers to genuinely feel emotions because that is dependent on personal experience. For example, telling someone what it’s like to ride a bike does not permit them to understand what it is like for the first time. Therefore, it is true that the GANs algorithm and more broadly, computers, can not understand emotions. Yet, is it even necessary for art to be created with emotions?
+            </p>
+            <p>
+                It's not as if we walk into every museum with the full story about how each piece was created, the personal turmoil of the artist at the time, and their intended meaning. Instead art is so nuanced and subjective because what is most important is what the viewer is able to derive from the piece. Therefore criticizing AI models for not having an understanding of human emotion is ill conceived because it is not necessary in its reception, in fact sometimes we enforce this idea of not acknowledging the artist and their backstories.
+            </p>
+            <p>
+                In art history class, we are always asked to react to a painting before learning anything about the artist because oftentimes that affects how we perceive the painting. For example, if we see Caillebotte's “Les Raboteurs de Parquet”, we immediately see a few men working on the floor. However if we knew of the many rumors that Caillebotte was gay, then the scene suddenly becomes more sensual. Or, we have Gauguin who is popularly disliked because of his underage pursuits in his personal life, but then by shunning him, we ignore the contributions of his work in color theory and perspective. By separating the art from the artist, we reflect less on the process of production or the intentions of the artist and instead highlight the idea that the intrinsic qualities of a piece can stand apart from the personal life and emotions of the artist. Therefore AI-generated art can still invoke emotions in the viewer without intentionally being created with emotion itself. 
+            </p>
+            <p>
+                While it's true that art created with emotional intent may carry rich and layered meanings, this does not inherently devalue the capacity of AI-generated art to provoke deep reactions. Artistic depth is not only a product of the creator's intent but also a reflection of the viewer's interpretation. For example, abstract art often carries emotional weight despite its ambiguity; the richness lies in the subjective responses of those who view it. Similarly, AI-generated art, despite lacking human emotion in its creation, can still generate profound emotional experiences by inviting unique interpretations. This suggests that emotional depth is less about the creator's state of mind and more about the connection formed with the audience.
+            </p>
+
+            <h3>Defining Art through its Historical Movements</h3>
+            <i>Throughout this paper I debate what is and isn't art, without ever having properly defined art. To be frank, no one really has, because that is the appeal of art. It has evolved and mutated throughout history to be much looser and subjective, maybe broad enough to accept AI-generated images as art as well.</i>
+            <p>
+                Beginning in the 17th century, The Salon in Paris was one of the most prominent and influential art exhibitions in the Western world. The Salon held the power to accept or reject works submitted by artists, dictating the standards of good art. At the time, art was judged primarily by its likeness to reality, emphasizing perspective, color, and technique. But this traditional and rigid structure would soon be tested by ambitious artists and critics.
+            </p>
+            <p>
+                During the time of the Impressionist movement, one of the first and most famous art critics, Charles Baudelaire, described the modern artist as a flâneur, saying, “Modernity is the transient, the fleeting, the contingent; it is one half of art, the other being the eternal and the immutable.” For Baudelaire, art reflects a deeply human quality, rooted in capturing fleeting moments amidst the ever-changing tides of modern life. During the Industrial Revolution, these shifts were especially pronounced. Political instability and rapid technological progress transformed society. For many, this progress was not seen as a positive thing because it redefined what it meant to be human. Through industrialization rose materialism, disillusionment, and wealth disparity. The flâneur and the artist observed and synthesized these transient moments, finding beauty and meaning in the overlooked. This act of rendering nuance is central to art and fundamentally human, opposed to the reductionist nature of discrete machines. While computers may be able to replicate the immutable aspects of art, in form and color, could they ever grasp the ephemeral, lived experiences that define human creativity?
+            </p>
+            <p>
+                The fall of the Salon's dominance further broadened the definitions of art, driven by movements like Realism, which questioned whether art had to be beautiful, and Cubism, which rejected the necessity of representing reality. These human-driven movements pushed the boundaries of artistic expression, fueled by inquiry and innovation. Now, in the context of our technological revolution, the question resurfaces: have these boundaries expanded enough to encompass AI-generated art?
+            </p>
+            <p>
+                Modern movements like Dadaism offer a possible parallel to this debate. Born in the chaos of World War I, Dadaism rejected traditional structures and art-world conventions, often asking directly: What is art? For example, the popular symbol of the movement, Duchamp's “Fountain” is just a urinal. There is no color theory, no technique, and no interaction with the medium which made it so controversial. The movement was focused on pure expression, the desire to destabilize these at times arbitrary yet rigorous traditions of the art world and more broadly, society, and completely redefined art as it diminished the seriousness and rigidity in art. 
+            </p>
+            <p>
+                Dadaism's legacy demonstrates how even movements rooted in undermining traditional values can redefine art. It is worth questioning whether today's AI-generated works, while lacking the emotional or philosophical depth of human creators, might similarly destabilize conventions and expand the boundaries of what society considers art. Duchamp's Fountain made people think differently about creativity, context, and purpose. Could AI-generated art also provoke similar shifts in perspective?
+            </p>
+            <p>
+                History shows that definitions of art have always evolved, driven by human ingenuity and the questioning of norms. While AI-generated art challenges these boundaries, its lack of intent and emotional depth highlights key differences from human-driven revolutions in art. Nevertheless, AI's influence invites us to reflect on how we define creativity, authorship, and meaning in an increasingly automated world.
+            </p>
+
+            <h3>Conclusion</h3>
+            <p>
+                Despite arguments of originality, creativity, and emotion, AI generated art should still be considered art given the expanding definition of art. Although the foundational code was heavily inspired by another programmer and therefore not original, this practice is common in the coding world and does not devalue the work. Although the AI model cannot create anything without using past works, that does not mean it is unable to be creative. And although the AI model cannot understand emotion, it does not mean it lacks the ability to inspire emotion in the beholder. In considering whether AI-generated works qualify as art, the discussion circles back to the very essence of what art represents. Throughout history, art has evolved alongside societal and technological shifts, challenging rigid definitions and expanding boundaries. Today, AI-generated art forces us to contemplate art's new frontier, one where creativity emerges not from the human hand but from algorithms and data. While AI lacks intention, emotion, and lived experience, its capacity to produce images that elicit responses from human audiences cannot be ignored.  
+            </p>
+            <p>
+                For humans, art is an inherently subjective and emotional process, reflecting personal experiences, intentions, and interpretations of the world. AI, by contrast, operates without the nuances of emotion or self-awareness, engaging instead in a process that is mechanical and mathematical. But ultimately, AI-generated works serve as both a tribute to and a disruption of human creativity. They offer new possibilities for collaboration and exploration, but they also force us to ask whether art without emotion, intention, and individuality retains the depth and resonance of its human counterpart. As art continues to evolve, these questions will remain central to our understanding of creativity in an increasingly digital age, highlighting that perhaps art's greatest value lies in the conversation it inspires between artists, audiences, and now, algorithms.  
+            </p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-date" id="ftr-date"></span>
+    <span class="footer-copy">© 2026 Aerin Jo tran</span>
+  </footer>
+</div>
+
+<script src="../script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="site">
+
+  <header class="site-header">
+    <div>
+      <div class="site-name" style="font-size: large;">Aerin Jo Tran</div> 
+      <div class="site-date" id="hdr-date"></div>
+    </div>
+    <nav>
+      <a class="active" data-page="home" onclick="goto('home')">Index</a>
+      <a data-page="about" onclick="goto('about')">About</a>
+      <a data-page="tech" onclick="goto('tech')">Work</a>
+      <a data-page="blog" onclick="goto('blog')">Writing</a>
+      <a data-page="contact" onclick="goto('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <div class="panel visible" id="page-home">
+    <div class="layout">
+      <div class="left">
+        <div class="upcoming-label">Upcoming</div>
+        <div style="margin-bottom: 0.4rem;">
+          <span class="upcoming-item" onclick="goto('tech')">AI for Traffic Congestion in Los Angeles</span>
+        </div>
+        <div style="margin-bottom: 2rem;">
+          <span style="font-family:var(--mono);font-size:12px;color:var(--fg2);">March — May '26</span>
+        </div>
+
+        <div class="previously">
+          <div class="section-label">Previously</div>
+          <div class="year-group">
+            <div class="year">2025</div>
+            <ul class="proj-list">
+              <li><a onclick="goto('tech')">Decentralized Identity and Privacy</a></li>
+            </ul>
+          </div>
+          <div class="year-group">
+            <div class="year">2024</div>
+            <ul class="proj-list">
+              <li><a onclick="goto('blog')">Life on the B-Side</a></li>
+              <li><a onclick="goto('blog')">AI-Generated Art</a></li>
+            </ul>
+          </div>
+          <div class="year-group">
+            <div class="year">2023</div>
+            <ul class="proj-list">
+              <li><a onclick="goto('blog')">A Modern Taming of the Shrew</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <p class="bio-right">
+          Computer Science major with a Humanities minor, combining technical rigor with strong communication and analytical skills. Interested in roles that sit at the intersection of technology, data, and human-centered problem solving.
+        </p>
+        <div class="links-right">
+          <a onclick="goto('about')">About</a>
+          <a onclick="goto('tech')">Portfolio &amp; work</a>
+          <a onclick="goto('blog')">Writing</a>
+          <a onclick="goto('contact')">Get in touch</a>
+          <a href="#">Resume ↗</a>
+          <a href="#">GitHub ↗</a>
+        </div>
+        <div class="copyright">© 2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="panel" id="page-about">
+    <div class="layout">
+      <div>
+        <div class="about-name">Hello,<br>I'm Aerin.</div>
+        <div class="about-body">
+          <p>I'm currently a senior at NYU Shanghai expected to graduate in May 2026. Originally from Los Angeles, I'm grateful for the opportunity to have studied all over the world including: Paris, New York, and of course Shanghai. <span class="highlight">fast, reliable, and well-documented</span>.</p>
+          <p>Academically, I focus on data, systems, and emerging technologies. My work has included projects in decentralized identity systems, machine learning, and data analysis, where I'm particularly interested in how technical infrastructure shapes privacy, security, and decision-making. I enjoy translating complex technical ideas into clear explanations, which has also led me to explore technical writing and analytics.</p>
+          <p>At the same time, I've always been drawn to the creative side of ideas. I enjoy writing, film, and art history, and I'm interested in how technology interacts with culture and media. Whether I'm analyzing a dataset, writing about a new technology, or developing a business idea, I'm motivated by the same goal: turning complex systems into something understandable and useful.</p>
+          <p>Long term, I'm interested in working where technology, data, and creative industries overlap, in spaces where analytical thinking and storytelling both matter.</p>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Details</div>
+        <div class="about-details">
+          <div class="detail-row"><span class="detail-key">Location</span><span class="detail-val">Los Angeles, CA</span></div>
+          <div class="detail-row"><span class="detail-key">Programming</span><span class="detail-val">Python, SQL, R</span></div>
+          <div class="detail-row"><span class="detail-key">Writing</span><span class="detail-val">Tech, art, literature</span></div>
+          <div class="detail-row"><span class="detail-key">Availability</span><span class="detail-val" style="color:#4caf50;">Open to work</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TECH / WORK -->
+  <div class="panel" id="page-tech">
+    <div class="section-label">Selected work</div>
+    <div class="layout">
+      <div>
+        <p class="tech-intro">There is a connection between everything. The goal is to find and analyze those patterns in order to make meaningful assessments about the phenomena around us.</p>
+
+        <div class="project-item">
+          <div class="project-title"><a href="#">Decentralized Identity and Privacy for University Authentication</a></div>
+          <p class="project-desc">Architectural comparison between existing and a decentralized approach for university authentication systems.</p>
+          <div class="tag-row">
+            <span class="tag">Python</span><span class="tag">Cybersecurity</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-title"><a href="https://github.com/aerinjojo/Labs/blob/main/anth-ua-228-lab-9-ajt9668/anth-ua-228-lab-9-ajt9668.html">Understanding the End of Slavery in the New River Estate through Ceramic Remnants</a></div>
+          <p class="project-desc">Investigating the spatial relationship between artefacts and the foundations of the gas chambers at the Sobibor extermination camp</p>
+          <div class="tag-row">
+            <span class="tag">R</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label" style="margin-bottom:1rem;">Skills</div>
+        <div class="skills-grid">
+          <div>
+            <div class="skill-group-label">Languages</div>
+            <ul class="skill-list">
+              <li>Python</li><li>R</li><li>SQL</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skill-group-label">Systems</div>
+            <ul class="skill-list">
+              <li>Git</li><li>Linux</li><li>Excel</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skill-group-label">Interests</div>
+            <ul class="skill-list">
+              <li>Distributed systems</li><li>Decentralization</li><li>Dev tooling</li><li>ML infra</li>
+            </ul>
+          </div>
+          <div>
+            <div class="skill-group-label">Writing</div>
+            <ul class="skill-list">
+              <li>Technical essays</li><li>Documentation</li><li>Blog / newsletter</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG / WRITING -->
+  <div class="panel" id="page-blog">
+    <div class="layout">
+      <div>
+        <div class="featured-post">
+          <span class="featured-tag">Featured</span>
+          <div class="featured-title"><a href="writing/ss1.html">Life on the B-Side</a></div>
+          <p class="featured-excerpt">A short story based on personal feelings of imposter syndrome</p>
+          <div class="post-meta">Feb 2025 &nbsp;·&nbsp; 5 min read</div>
+        </div>
+
+        <div class="section-label">All posts</div>
+        <div class="post-list">
+          <div class="post-row">
+            <span class="post-row-title"><span class="category-dot"></span><a href="writing/AIGenArt.html">AI-Generated Art</a></span>
+            <span class="post-row-date">Dec 2024</span>
+          </div>
+          <div class="post-row">
+            <span class="post-row-title"><span class="category-dot"></span><a href="writing/ModTaming.html">A Modern Taming of the Shrew</a></span>
+            <span class="post-row-date">Sept 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label">Categories</div>
+        <div style="display:flex;flex-direction:column;gap:0.4rem;margin-bottom:2rem;font-family:var(--mono);font-size:13px;">
+          <a href="#" style="color:var(--fg);text-decoration:none;">Short Stories →</a>
+          <a href="#" style="color:var(--fg);text-decoration:none;">Essays →</a>
+        </div>
+
+        <div class="section-label">About this page</div>
+        <p style="font-family:var(--serif);font-size:0.95rem;line-height:1.75;color:var(--fg2);">
+          Here are a collection of essays and stories. Some academic, others just for fun.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="panel" id="page-contact">
+    <div class="layout">
+      <div>
+        <div class="contact-heading">Let's talk.</div>
+        <p class="contact-body">I'm open to cybersecurity roles, interesting  projects, and conversations about systems, writing, or anything else worth a long email.</p>
+        <div class="contact-links">
+          <a href="mailto:hello@yourname.com"><span class="clink-key">Email</span><span class="clink-label">aerintran@gmail.com ↗</span></a>
+          <a href="https://github.com/yourname" target="_blank"><span class="clink-key">GitHub</span><span class="clink-label">https://github.com/aerinjojo ↗</span></a>
+          <a href="https://linkedin.com/in/yourname" target="_blank"><span class="clink-key">LinkedIn</span><span class="clink-label">https://www.linkedin.com/in/aerintran ↗</span></a>
+        </div>
+        <div class="availability">
+          <span class="avail-dot"></span>
+          <span class="avail-text">Available for work — LA &amp; remote </span>
+        </div>
+      </div>
+      <div>
+        <div class="section-label">Response time</div>
+        <p style="font-family:var(--mono);font-size:12px;line-height:2;color:var(--fg2);">
+          Email: usually within 48h<br>
+          LinkedIn: slower<br>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <span class="footer-date" id="ftr-date"></span>
+    <span class="footer-copy">© 2026 Aerin Jo tran</span>
+  </footer>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
