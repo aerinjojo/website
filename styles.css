@@ -3,10 +3,10 @@
 :root {
   --accent: #f9a2c5;
   --accent-dark: #ea5e86;
-  --fg: #111111;
-  --fg2: #666666;
-  --bg: #ffffff;
-  --border: rgba(0,0,0,0.12);
+  --fg: #f0f0f0;
+  --fg2: #999999;
+  --bg: #111111;
+  --border: rgba(255,255,255,0.12);
   --mono: 'DM Mono', monospace;
   --serif: 'EB Garamond', Georgia, serif;
 }
