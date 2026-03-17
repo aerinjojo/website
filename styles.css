@@ -11,15 +11,6 @@
   --serif: 'EB Garamond', Georgia, serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fg: #f0f0f0;
-    --fg2: #999999;
-    --bg: #111111;
-    --border: rgba(255,255,255,0.12);
-  }
-}
-
 body {
   font-family: var(--mono);
   background: var(--bg);
